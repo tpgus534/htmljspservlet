@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE book[
+	<!ELEMENT book (title, anthor,price,desciption?)>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT anthor (#PCDATA)>
+		<!ELEMENT price (#PCDATA)>
+		<!ELEMENT desciption (#PCDATA)>
+]>
+
+<book>
+	<title>java &amp; xml kr</title>
+	<anthor>홍길동</anthor>
+	<price>30000</price>
+</book>

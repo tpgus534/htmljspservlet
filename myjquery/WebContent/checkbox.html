@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var ckk = $("input[type=checkbox]");
+var all = ckk[0];
+console.log(all);
+var $all = $(all);
+$all.click(function() {
+		console.log(1);
+	for (var i = 1; i < ckk.length; i++) {
+		//check[i].checked = allck.checked;
+		$(ckk[i]).prop("checked", $all.prop("checked"));
+	}
+});
+});
+
+	/* window.addEventListener("load", function() {
+
+		var check = document.querySelectorAll("input[type=checkbox]");
+		var allck = check[0];
+		allck.addEventListener("click", function() {
+			for (var i = 1; i < check.length; i++) {
+				check[i].checked = allck.checked;
+			}
+		});
+	}); */
+</script>
+</head>
+<body>
+	<div>
+		<input type="checkbox" value="all">ALL
+	</div>
+	<div>
+		<input type="checkbox" checked>ONE&nbsp;&nbsp; 
+		<input type="checkbox">TWO&nbsp;&nbsp; 
+		<input type="checkbox">THREE
+	</div>
+</body>
+</html>

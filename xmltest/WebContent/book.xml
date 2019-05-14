@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE booklist SYSTEM "book.dtd">
+
+<booklist>
+	<book isbn="a1" kind="소설">
+		<title>해리포터와 마법사의 돌</title>
+		<author>
+			<writer sex="여">조앤.k.롤링</writer>
+			<tel>010-5152-4565</tel>
+			<address>미국 어딘가</address>
+		</author>
+		<publisher>세현</publisher>
+		<price>5000</price>
+	</book>
+</booklist>

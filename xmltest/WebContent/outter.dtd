@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!ENTITY kr "대한민국">
+
+	<!ELEMENT book (title, anthor,price,desciption?)>
+		<!ELEMENT title (#PCDATA)>
+		<!ELEMENT anthor (#PCDATA)>
+		<!ELEMENT price (#PCDATA)>
+		<!ELEMENT desciption (#PCDATA)>

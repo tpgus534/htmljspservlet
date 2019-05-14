@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var $aObj = $("div>a");
+	//console.log($aObj);
+	$aObj.click(function() {
+		alert("출력되었씁니다.");
+		$(this).css("background-color","yellow");
+		return false;
+	});
+	
+	var $divObj = $("div");
+	$divObj.click(function() {
+		$(this).css("background-color", "gray");
+	})
+});
+
+
+
+//window개ㄱ체에서 load이벤트가 발생했을떄 처리할 핸들러 작성하기
+/* window.addEventListener("load", function(){
+	//dom에서 a객체 찾기
+	var aObj = document.querySelector("div>a");
+	aObj.addEventListener("click", function(event){
+		alert("출력되었습니다.");
+		this.style.backgroundColor='yellow';
+		event.preventDefault();
+		event.stopPropagation();
+	});
+	
+	var divObj = document.querySelector("div");
+	divObj.addEventListener("click", function() {
+		this.style.backgroundColor='gray';
+	});
+	
+	
+}); */
+</script>
+</head>
+<body>
+<div>DIV1</div>
+<div><a href= "http://www.google.com">구글</a></div>
+</body>
+</html>

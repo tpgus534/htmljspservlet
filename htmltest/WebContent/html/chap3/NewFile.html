@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2 align = "center">form control test - 회원가입</h2>
+	<table border="1" width="700" align = "center">
+		<tr>
+			<td width="200">이름</td>
+			<td colspan="2"><input name = "name"></td>
+		</tr>
+		<tr>
+			<td>아이디</td>
+			<td colspan="2"><input name = "id"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td colspan="2"><input name = "pass"></td>
+		</tr>
+		<tr>
+			<td>비밀번호확인</td>
+			<td colspan="2"><input name = "passok">&nbsp<button type="submit" class = "subm">중복확인</button></td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td colspan="2"><input name="gender" type = "radio">남<input name="gender" type = "radio">여</td>
+		</tr>
+		<tr align="center">
+			<td colspan="3">좋아하는 과일</td>
+
+		</tr>
+		<tr align="center">
+			<td colspan="3"><input name = "fruit" type = "checkbox">딸기<input type = "checkbox">사과<input type = "checkbox">포도<input type = "checkbox">수박</td>
+
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td colspan="2"><input name = "emailid">@<t>
+			<select id="emaildomain" name="emaildomain">
+				<option value = "daum.net"> 다음
+				<option value = "naver.com" selected="selected"> 네이버
+				<option value = "nate.com"> 네이트
+				<option value = "gmail.com"> 구글
+			</select>&nbsp<input id = "emaildomain" name = "emaildomain"></td>
+		</tr>
+		<tr>
+			<td>연락처</td>
+			<td colspan="2">
+				<select>
+					<option value = "010">010
+					<option value = "011">011
+					<option value = "012">012
+					<option value = "013">013
+					<option value = "014">014
+				</select>
+				-<input name = "tel1">-<input name = "tel1"></td>
+		</tr>
+		<tr align = "center">
+			<td colspan="3"><button>회원가입</button>&nbsp<button>취소</button></td>
+		</tr>
+	</table>
+</body>
+</html>

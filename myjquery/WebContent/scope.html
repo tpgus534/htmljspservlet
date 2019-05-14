@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var a;
+console.log(typeof(a));
+console.log(a+1);
+
+var a = 10;
+
+var b = function(){
+	var Iv = 'hello';
+	gv = 'global';
+	for (var i = 0; i < 10; i++) {
+		console.log(i+","+Iv+","+gv);
+	}
+	console.log("in function Iv = "+Iv);
+	console.log("in function i = "+i);
+	console.log("in function gv = "+gv);
+}
+
+console.log(typeof(b));
+console.log(b);
+b();
+console.log("out function gv = "+ gv);
+//console.log("out function Iv = "+ Iv);
+</script>
+<script type="text/javascript">
+window.addEventListener("load", function() {
+	var arr = document.querySelectorAll("button");	
+	for (var i = 0; i < arr.length; i++) {
+		var btObj= arr[i];
+		(function(j){
+		btObj.addEventListener("click", function() {
+		//	alert(j+"번쨰 버튼이 클릭되었스비다.")
+		var aObj = document.querySelector("input[name=a]");
+		var bObj = document.querySelector("input[name=b]");
+		var aNum = parseInt(aObj.value);
+		var bNum = parseInt(bObj.value);
+		switch (j) {
+		case 0:
+			alert(aNum+bNum);
+			break;
+		case 1:
+			alert(aNum-bNum);
+			break;
+		case 2:
+			alert(aNum*bNum);
+			break;
+		case 3:
+			alert(aNum/bNum);
+			break;
+		default:
+			break;
+		}
+		});
+		
+		})(i);
+		}
+});
+</script>
+</head>
+<body>
+<input type="text" name="a">
+<input type="text" name="b"><br>
+<button>+</button>
+<button>-</button>
+<button>*</button>
+<button>/</button>
+
+</body>
+</html>

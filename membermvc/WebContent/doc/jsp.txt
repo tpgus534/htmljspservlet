@@ -1,0 +1,30 @@
+** JSP(Java Server Page)
+servlet(*.java) : html in java
+jsp(*.jsp) : java in html
+
+*compile 기반 : servlet jsp (run)
+실행시점에 바이트변환을 해서 빠르다. 대신에 코딩하기 어렵다.
+ script 기반 : jsp (coding), asp, php
+ 코딩하기 쉽다. 
+
+--Script Element : <% java code %>
+1. 선언부 : jsp에서 사용될 변수, 메소드를 선언하는 영역
+형식) <%! javacode %>
+	Stirng name;
+	int age
+	public void setZ()/\}
+	}
+
+2. 처리부 : jsp가 호출 될 떄마다 매번호출되는 영역..>>service method
+3. 출력부 : client 출력.
+	형식) <%= <문자열>%>
+	예) <%= <문자열>%> == <% out.print(name); %>	
+public class ClassName [servlet] {
+선언부(변수, 베소드(){})
+	
+	public void service(request, response){
+	
+	
+
+	}
+}

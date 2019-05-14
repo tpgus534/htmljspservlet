@@ -1,0 +1,13 @@
+웹서버
+아파치	PHP	PHP실행DLL이 내장되어있음.
+IIS	ASP		실행모듈이 내장되어있음.
+톰캣 JSP/SERVLET	JSP/SERVLET엔진이 내장되어있음.
+
+아파치(IIS)+톰캣
+
+웹서버 구조
+server Layer: 요청/응답 담당
+				자원 찾기, 내용응답하기(.html, html, xml, js, css)
+engine Layer : web.xml찾기
+
+service Layer: 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#engine, #body{
+	display:none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#car").change(function() {
+			//var $engineObj = $("#engine");
+			var $engineObj = $("#div2");
+			var data = '<select id="engine">';
+			var car = $(this).val();
+			if (car == "소나타") {
+				data += '<option>Smartstream</option>' ;
+				data+="</select>";
+				$engineObj.html(data);
+				
+				var $selectObj=$engineObj.find("#engine");
+				$selectObj.show();
+			} else if (car=="팰리세이드") {
+				data +='<option>가솔린</option>';
+				data +='<option>디젤</option>';
+				data+="</select>";
+				$engineObj.html(data);
+				var $selectObj=$engineObj.find("#engine");
+				$selectObj.show();
+			} else{
+				var $selectObj=$engineObj.find("#engine");
+				$selectObj.hide();
+			}
+			
+			//$engineObj.css('display','inline-block');
+		});
+		/* var $engine = $("#engine");
+		$engine.click(function() {
+			alert($engine.val());
+		}); */
+		$("#div2").on("click", "#engine", function() {
+			alert($(this).val());
+		});
+		
+	});
+</script>
+</head>
+<body>
+<div>
+	<select id="car">
+		<option>선택하세요</option>
+		<option>소나타</option>
+		<option>팰리세이드</option>
+	</select>
+</div>
+<div id="div2">
+	<!-- <select id="engine">
+	</select> -->
+</div>
+<div>
+	<select  id="body">
+	</select>
+</div>
+</body>
+</html>

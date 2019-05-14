@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+<span id = "span1" style="background:black;color:white;">span입니다.</span>
+
+<script type="text/javascript">
+var span1 = document.getElementById("span1");
+span1.addEventListener("mouseenter", mouseIn, false);
+span1.addEventListener("mouseleave", mouseOut, false);
+origin();
+
+function mouseIn(){
+	span1.style.background="magenta";
+}
+function mouseOut(){
+	span1.style.background="orange";
+}
+function originblack(){
+	span1.style.background="black";
+}
+
+function origin(){
+	window.setInterval(originblack,3000);
+}
+</script>
+
+</body>
+</html>

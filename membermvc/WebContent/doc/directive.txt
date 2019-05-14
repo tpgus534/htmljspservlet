@@ -1,0 +1,8 @@
+directive (지시문) : <%@ 지시문종류(page,include,taglib) 속성1="값1" 속성2="값2".....속성N="값N"%>
+
+1. page
+
+
+2. include
+
+3. taglib
