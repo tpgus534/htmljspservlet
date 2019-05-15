@@ -29,11 +29,12 @@ public class CustomerService {
 		} catch (NotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			result += "-1";
 		}
-		if (c!=null && c.getPass()==pass) {
-			result += "로그인성공";
+		if (c.getPass().equals(pass)) {
+			result += "1";
 		} else {
-			result += "로그인실패";
+			result += "-1";
 		}
 		
 		return result;

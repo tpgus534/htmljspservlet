@@ -7,8 +7,6 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -20,7 +18,7 @@ $(document).ready(function() {
 			method:"post",
 			data:$("#loginform").serialize(),
 			success:function(result){
-				alert(result);
+				location.href="semantic.jsp";
 			},
 			error:function(result){
 				alert("오륬");
@@ -28,8 +26,13 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	});
-	
+	var $moveRegisterBtn = $("#moveRegisterBtn");
+	$moveRegisterBtn.click(function() {
+	$("nav>ul>li>a[href='user/member.html']").trigger("click");
+	});	
+});
+
+
 function login(){
 /* 	if (document.getElementById("id").value == "") {
 		alert("아이디 쓰시라구여");
@@ -58,11 +61,11 @@ function login(){
 					<label for="">비밀번호</label> <input type="password"
 						class="form-control" id="pass" name="pass" placeholder="" required="required">
 				</div>
+			</form>
 				<div class="form-group" align="center">
-					<button class="btn btn-warning" id="loginBtn">로그인</button>
+					<button class="btn btn-warning" id="loginBtn" >로그인</button>
 					<button class="btn btn-primary" id="moveRegisterBtn">회원가입</button>
 				</div>
-			</form>
 		</div>
 	</div>
 

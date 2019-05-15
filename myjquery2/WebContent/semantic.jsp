@@ -1,3 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,15 @@
 		var aArr = $("nav>ul>li>a");
 		$(aArr).click(function() {
 			var vurl = $(this).attr("href");
+			if (vurl == "logout") {
+				$.ajax({
+					url:vurl,
+					method:"get",
+					success:function(result){
+						location.href="semantic.jsp";
+					}
+				});
+			} else {
 			$.ajax({
 				url:vurl,
 				method:"get",
@@ -16,8 +26,10 @@
 					$("section").html(result);
 				}
 			});
+			}
 			return false;
 		});
+		
 	});
 </script>
 <style>
@@ -48,12 +60,9 @@ footer{
 	<header>
 		<h1>타노스</h1>
 	</header>
-	<nav>
-		MANU
-		<ul>
-			<li><a href="user/login.html">로그인</a></li>
-			<li><a href="user/member.html">가입</a></li>
-		</ul>
+	<nav>MANU
+	<jsp:include page="menu.jsp"/>
+
 	</nav>
 	<section>본문</section>
 	<footer>사업자등록</footer>

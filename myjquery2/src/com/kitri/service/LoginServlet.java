@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -18,14 +19,17 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		String id = request.getParameter("id");
-		System.out.println(id);
-		System.out.println("1");
 		String pass = request.getParameter("pass");
 		String result = CustomerService.getCustomerService().login(id, pass);
+		
+		HttpSession session = request.getSession();
+		session.removeAttribute("loginInfo");
+		if (result.equals("1")) {
+			session.setAttribute("loginInfo", id);
+		}
 		request.setAttribute("result", result);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/loginJsp.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/loginresult.jsp");
 		dispatcher.forward(request, response);
-		System.out.println(result);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

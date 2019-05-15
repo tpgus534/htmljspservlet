@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<title>íšŒì›ê°€ì…</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 /* $(document).ready(function() {
 	 
@@ -18,17 +8,17 @@
 }); */
 
 function register(){
-	if(document.getElementById("name").value == ""){//ì •ê·œí‘œí˜„ì‹ ì“°ê¹Œë¬µì§œ
-		alert("ì´ë¦„ ì…ë ¥!!!!");
+	if(document.getElementById("name").value == ""){//Á¤±ÔÇ¥Çö½Ä ¾²±î¹¬Â¥
+		alert("ÀÌ¸§ ÀÔ·Â!!!!");
 		return;
 	} else if (document.getElementById("id").value == "") {
-		alert("ì•„ì´ë”” ì…ë ¥!!!!");
+		alert("¾ÆÀÌµğ ÀÔ·Â!!!!");
 		return;
 	} else if (document.getElementById("pass").value == "") {
-		alert("ë¹„ë°€ë²ˆí˜¸ ì…ë ¥!!!!");
+		alert("ºñ¹Ğ¹øÈ£ ÀÔ·Â!!!!");
 		return;
 	} else if (document.getElementById("pass").value != document.getElementById("passcheck").value) {
-		alert("ë¹„ë°€ë²ˆí˜¸ í™•ì¸!!!!");
+		alert("ºñ¹Ğ¹øÈ£ È®ÀÎ!!!!");
 		return;
 	} else {
 		document.getElementById("memberform").action = "/memberservlet/register";
@@ -36,31 +26,31 @@ function register(){
 	}
 }
 </script>
-</head>
-<body>
+
+
 
 <div class="container" align="center">
 	<div class="col-lg-6" align="center">
-		<h2>íšŒì›ê°€ì…</h2>
+		<h2>È¸¿ø°¡ÀÔ</h2>
 		<form id="memberform" method="get" action="">
 			<div class="form-group" align="left">
-				<label for="name">ì´ë¦„</label>
-				<input type="text" class="form-control" id="name" name="name" placeholder="ì´ë¦„ì…ë ¥">
+				<label for="name">ÀÌ¸§</label>
+				<input type="text" class="form-control" id="name" name="name" placeholder="ÀÌ¸§ÀÔ·Â">
 			</div>
 			<div class="form-group" align="left">
-				<label for="">ì•„ì´ë””</label>
-				<input type="text" class="form-control" id="id" name="id" placeholder="4ìì´ìƒ 16ì ì´í•˜">
+				<label for="">¾ÆÀÌµğ</label>
+				<input type="text" class="form-control" id="id" name="id" placeholder="4ÀÚÀÌ»ó 16ÀÚ ÀÌÇÏ">
 			</div>
 			<div class="form-group" align="left">
-				<label for="">ë¹„ë°€ë²ˆí˜¸</label>
+				<label for="">ºñ¹Ğ¹øÈ£</label>
 				<input type="password" class="form-control" id="pass" name="pass" placeholder="">
 			</div>
 			<div class="form-group" align="left">
-				<label for="">ë¹„ë°€ë²ˆí˜¸ì¬ì…ë ¥</label>
+				<label for="">ºñ¹Ğ¹øÈ£ÀçÀÔ·Â</label>
 				<input type="password" class="form-control" id="passcheck" name="passcheck" placeholder="">
 			</div>
 			<div class="form-group" align="left">
-				<label for="email">ì´ë©”ì¼</label><br>
+				<label for="email">ÀÌ¸ŞÀÏ</label><br>
 				<div id="email" class="custom-control-inline">
 				<input type="text" class="form-control" id="emailid" name="emailid" placeholder="" size="25"> @
 				<select class="form-control" id="emaildomain" name="emaildomain">
@@ -73,7 +63,7 @@ function register(){
 				</div>
 			</div>
 			<div class="form-group" align="left">
-				<label for="tel">ì „í™”ë²ˆí˜¸</label>
+				<label for="tel">ÀüÈ­¹øÈ£</label>
 				<div id="tel" class="custom-control-inline">
 				<select class="form-control" id="tel1" name="tel1">
 					<option value="010">010</option>
@@ -89,40 +79,40 @@ function register(){
 				</div>
 			</div>
 			<div class="form-group" align="left">
-				<label for="">ì£¼ì†Œ</label><br>
+				<label for="">ÁÖ¼Ò</label><br>
 				<div id="addressdiv" class="custom-control-inline">
-					<input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="ìš°í¸ë²ˆí˜¸" size="7" maxlength="5">
-					<!--<button type="button" class="btn btn-primary" onclick="javascript:">ìš°í¸ë²ˆí˜¸</button>-->
+					<input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="¿ìÆí¹øÈ£" size="7" maxlength="5">
+					<!--<button type="button" class="btn btn-primary" onclick="javascript:">¿ìÆí¹øÈ£</button>-->
 				</div>
 				<input type="text" class="form-control" id="address" name="address" placeholder="">
 				<input type="text" class="form-control" id="address_detail" name="address_detail" placeholder="">
 			</div>
 			<div class="form-group" align="center">
-				<button type="button" class="btn btn-primary" id="registerBtn" onclick="javascript:register();">íšŒì›ê°€ì…</button>
-				<button type="reset" class="btn btn-warning" >ì´ˆê¸°í™”</button>
+				<button type="button" class="btn btn-primary" id="registerBtn" onclick="javascript:register();">È¸¿ø°¡ÀÔ</button>
+				<button type="reset" class="btn btn-warning" >ÃÊ±âÈ­</button>
 			</div>
 		</form>
 	</div>
 </div>
 
 <div id="zipModal" class="modal fade" role="dialog">
-<h5 class="modal-title" id="myModalLabel">ìš°í¸ë²ˆí˜¸ê²€ìƒ‰</h5>
+<h5 class="modal-title" id="myModalLabel">¿ìÆí¹øÈ£°Ë»ö</h5>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">Ã—</span>
+                    <span aria-hidden="true">¡¿</span>
                 </button>
             </div>    
             <div class="modal-body text-center">
             	<form id = "zip_codeForm">
             		<div align="center">
-            			<label>ë„ë¡œëª… ì£¼ì†Œê²€ìƒ‰</label>
+            			<label>µµ·Î¸í ÁÖ¼Ò°Ë»ö</label>
             		</div>
 					<div class="input-group" align="left">
-						<input type="text" class="form-control" id="doro" name="doro" placeholder="ê²€ìƒ‰ í•  ë„ë¡œëª… ì…ë ¥(ì˜ˆ: êµ¬ë¡œë””ì§€í„¸ë¡œ, ì—¬ìˆ˜ìš¸ë¡œ)">
+						<input type="text" class="form-control" id="doro" name="doro" placeholder="°Ë»ö ÇÒ µµ·Î¸í ÀÔ·Â(¿¹: ±¸·ÎµğÁöÅĞ·Î, ¿©¼ö¿ï·Î)">
 						<span class="input-group-btn">
-						<input type="submit" class="btn btn-warning" value="ê²€ìƒ‰" id="searchBtn">
+						<input type="submit" class="btn btn-warning" value="°Ë»ö" id="searchBtn">
 						</span>
 					</div>
                 </form>
@@ -130,8 +120,8 @@ function register(){
                 	<table class = "table text-center">
                 		<thead>
                 		<tr>
-                			<th style="width:150px;">ìš°í¸ë²ˆí˜¸</th>
-                			<th style="width:600px;">ì£¼ì†Œ</th>
+                			<th style="width:150px;">¿ìÆí¹øÈ£</th>
+                			<th style="width:600px;">ÁÖ¼Ò</th>
                 		</tr>
                 		</thead>
                 		<tbody id="zip_codeList"></tbody>
@@ -141,6 +131,3 @@ function register(){
         </div>
     </div>
 </div>
-
-</body>
-</html>
