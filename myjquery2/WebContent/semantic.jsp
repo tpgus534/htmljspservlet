@@ -33,6 +33,16 @@
 	});
 </script>
 <style>
+span {
+	position: absolute;
+	bottom: 0px
+	
+}
+
+div>img {
+	
+	width:300px;
+	height:400px}
 header {
 	background-image:
 		url(https://t1.daumcdn.net/cfile/tistory/9966974B5B400C8328);

@@ -13,4 +13,5 @@
 	<%
 		}
 	%>
+	<li><a href="productlist">상품목록</a></li>
 </ul>
