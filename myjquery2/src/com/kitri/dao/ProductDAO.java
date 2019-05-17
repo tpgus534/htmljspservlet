@@ -37,7 +37,12 @@ public class ProductDAO {
 				String cate_name = rs.getString("cate_name");
 
 				ProductCategory pc = new ProductCategory(cate_no, cate_name);
-				Product p = new Product(prod_no, prod_name, prod_price, prod_detail, pc);
+				Product p = new Product();
+				p.setProd_detail(prod_detail);
+				p.setProd_name(prod_name);
+				p.setProd_no(prod_no);
+				p.setProd_price(prod_price);
+				p.setProductCategory(pc);
 				list.add(p);
 			}
 		} catch (ClassNotFoundException e) {
@@ -90,8 +95,12 @@ public class ProductDAO {
 			String cate_name = rs.getString("cate_name");
 
 			ProductCategory pc = new ProductCategory(cate_no, cate_name);
-			p = new Product(prod_no, prod_name, prod_price, prod_detail, pc);
-
+			p = new Product();
+			p.setProd_detail(prod_detail);
+			p.setProd_name(prod_name);
+			p.setProd_no(prod_no);
+			p.setProd_price(prod_price);
+			p.setProductCategory(pc);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

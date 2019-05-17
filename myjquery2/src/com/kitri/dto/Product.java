@@ -37,8 +37,7 @@ public class Product {
 		this.productCategory = productCategory;
 	}
 
-	public Product(String prod_no, String prod_name, int prod_price, String prod_detail,
-			ProductCategory productCategory) {
+	public Product() {
 		super();
 		this.prod_no = prod_no;
 		this.prod_name = prod_name;
@@ -46,10 +45,34 @@ public class Product {
 		this.prod_detail = prod_detail;
 		this.productCategory = productCategory;
 	}
+	
 	@Override
 	public String toString() {
 		return "Product [prod_no=" + prod_no + ", prod_name=" + prod_name + ", prod_price=" + prod_price
 				+ ", prod_detail=" + prod_detail + ", productCategory=" + productCategory + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((prod_no == null) ? 0 : prod_no.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (prod_no == null) {
+			if (other.prod_no != null)
+				return false;
+		} else if (!prod_no.equals(other.prod_no))
+			return false;
+		return true;
 	}
 	
 	

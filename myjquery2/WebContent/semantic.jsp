@@ -32,6 +32,7 @@
 		
 	});
 </script>
+
 <style>
 span {
 	position: absolute;
@@ -76,5 +77,6 @@ footer{
 	</nav>
 	<section>본문</section>
 	<footer>사업자등록</footer>
+	
 </body>
 </html>

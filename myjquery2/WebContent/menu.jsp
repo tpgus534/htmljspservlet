@@ -9,9 +9,11 @@
 	<%
 		} else {
 	%>
+	<li><a href="productlist">상품목록</a></li>
+	<li><a href="viewcart">장바구니보기</a></li>
 	<li><a href="logout">로그아웃</a></li>
 	<%
 		}
 	%>
-	<li><a href="productlist">상품목록</a></li>
+	
 </ul>

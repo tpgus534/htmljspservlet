@@ -18,10 +18,13 @@ import com.kitri.service.ProductService;
 @WebServlet("/productlist")
 public class ProductListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-   
+	ProductService ps;
+		public ProductListServlet() {
+			ps = new ProductService();
+		}
+		
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ProductService ps = new ProductService();
+		
 		List<Product> list = ps.findAll();
 		request.setAttribute("list", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/productlistresult.jsp");
